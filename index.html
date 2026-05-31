@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>北鼻</title>
     <style>
-        /* 全局样式重置与基础设置 */
         * {
             margin: 0;
             padding: 0;
@@ -17,68 +16,91 @@
             background-color: #fff5f8;
             color: #333;
             line-height: 1.8;
-            padding: 30px;
-            max-width: 900px;
+            padding: 20px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* 大标题样式 */
         h1 {
             color: #e84393;
             text-align: center;
-            font-size: 2.4rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 15px;
             text-shadow: 1px 1px 2px #ffc0cb;
         }
 
-        /* 二级标题 */
         h2 {
             color: #d63384;
-            font-size: 1.6rem;
-            margin: 30px 0 15px;
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
             padding-left: 10px;
             border-left: 4px solid #ff87b2;
         }
 
-        /* 段落文本 */
         p {
-            font-size: 1.05rem;
-            margin: 10px 0;
-            padding: 0 10px;
+            font-size: 1rem;
+            margin: 8px 0;
         }
 
-        /* 分割线美化 */
         hr {
             border: none;
             height: 2px;
             background: linear-gradient(to right, transparent, #ff9ac1, transparent);
-            margin: 35px 0;
+            margin: 30px 0;
         }
 
-        /* 列表样式 */
-        ul {
-            list-style: none;
-            padding: 0 20px;
+        /* 产品网格：每行3列 */
+        .product-wrap {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
-        li {
-            background: #ffffff;
-            margin: 8px 0;
-            padding: 10px 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(232, 67, 147, 0.15);
+        /* 商品卡片 */
+        .product-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(232, 67, 147, 0.18);
+            padding: 15px;
             transition: 0.3s ease;
+            text-align: center;
         }
 
-        li:hover {
-            transform: translateX(5px);
-            background: #ffeaf2;
+        .product-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 12px rgba(232, 67, 147, 0.25);
         }
 
-        /* 联系信息区块 */
+        /* 缩略图容器 */
+        .product-thumb {
+            width: 100%;
+            height: 220px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            margin-bottom: 12px;
+            overflow: hidden; /* 裁剪溢出部分 */
+        }
+
+        /* 图片自适应样式 */
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保持比例，自动裁剪适配容器 */
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
         .contact-box {
             background: #ffffff;
-            padding: 20px;
+            padding: 18px;
             border-radius: 10px;
             box-shadow: 0 3px 8px rgba(0,0,0,0.08);
         }
@@ -96,13 +118,48 @@
     <hr>
 
     <h2>产品信息</h2>
-    <ul>
-        <li>婴儿车</li>
-        <li>双胞胎车</li>
-        <li>四胞胎车</li>
-        <li>手推车</li>
-        <li>四合一车</li>
-    </ul>
+    <div class="product-wrap">
+        <!-- 第一行 3个 -->
+        <div class="product-item">
+            <div class="product-thumb">
+                <!-- 把 src 替换成你的图片链接 -->
+                <img src="https://raw.githubusercontent.com/kequan404-oss/tupian/refs/heads/main/%E4%B8%BB%E5%9B%BE-04.jpg" alt="婴儿车">
+            </div>
+            <div class="product-name">婴儿车</div>
+        </div>
+        <div class="product-item">
+            <div class="product-thumb">
+                <img src="你https://github.com/kequan404-oss/tupian/blob/main/%E8%AF%A6%E6%83%85-06.jpg?raw=true" alt="双胞胎车">
+            </div>
+            <div class="product-name">双胞胎车</div>
+        </div>
+        <div class="product-item">
+            <div class="product-thumb">
+                <img src="你的图片链接3" alt="四胞胎车">
+            </div>
+            <div class="product-name">四胞胎车</div>
+        </div>
+
+        <!-- 第二行 3个 -->
+        <div class="product-item">
+            <div class="product-thumb">
+                <img src="你的图片链接4" alt="手推车">
+            </div>
+            <div class="product-name">手推车</div>
+        </div>
+        <div class="product-item">
+            <div class="product-thumb">
+                <img src="你的图片链接5" alt="四合一车">
+            </div>
+            <div class="product-name">四合一车</div>
+        </div>
+        <div class="product-item">
+            <div class="product-thumb">
+                <img src="你的图片链接6" alt="待添加商品">
+            </div>
+            <div class="product-name">待添加商品</div>
+        </div>
+    </div>
 
     <hr>
 
@@ -113,9 +170,9 @@
 
     <hr>
 
-    <h2>联系我</h2>
+    <h2>Contact Us</h2>
     <div class="contact-box">
-        <p>Email: sales@qq.com</p>
+        <p>Email: sales@yourcompany.com</p>
         <p>WhatsApp: +8615918899787</p>
     </div>
 </body>
