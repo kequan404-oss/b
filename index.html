@@ -49,14 +49,12 @@
             margin: 30px 0;
         }
 
-        /* 产品网格：每行3列 */
         .product-wrap {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
-        /* 商品卡片 */
         .product-item {
             background: #fff;
             border-radius: 10px;
@@ -64,6 +62,7 @@
             padding: 15px;
             transition: 0.3s ease;
             text-align: center;
+            cursor: pointer;
         }
 
         .product-item:hover {
@@ -71,11 +70,10 @@
             box-shadow: 0 5px 12px rgba(232, 67, 147, 0.25);
         }
 
-        /* 缩略图容器 —— 已改为正方形 */
         .product-thumb {
             width: 100%;
             height: 0;
-            padding-bottom: 100%; /* 关键：正方形比例 */
+            padding-bottom: 100%;
             position: relative;
             background-color: #f9f9f9;
             border: 1px solid #eee;
@@ -84,14 +82,13 @@
             overflow: hidden;
         }
 
-        /* 图片自适应样式 */
         .product-thumb img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 保持比例，自动裁剪适配容器 */
+            object-fit: cover;
         }
 
         .product-name {
@@ -110,67 +107,84 @@
 <body>
     <h1>老婆，看我做的网站帅不帅</h1>
     <p>这是纯免费版的，所以网址有点奇怪。</p>
-
     <hr>
 
     <h2>爱你</h2>
     <p>付费之后网址将会变成正经网址，比如：loveyoubaby.com</p>
-
     <hr>
 
     <h2>产品信息</h2>
     <div class="product-wrap">
-        <!-- 第一行 3个 -->
-        <div class="product-item">
-            <div class="product-thumb">
-                <!-- 把 src 替换成你的图片链接 -->
-                <img src="https://raw.githubusercontent.com/kequan404-oss/tupian/refs/heads/main/%E4%B8%BB%E5%9B%BE-04.jpg" alt="婴儿车">
-            </div>
-            <div class="product-name">婴儿车</div>
-        </div>
-        <div class="product-item">
-            <div class="product-thumb">
-                <img src="https://raw.githubusercontent.com/kequan404-oss/tupian/refs/heads/main/%E8%AF%A6%E6%83%85-06.jpg" alt="双胞胎车">
-            </div>
-            <div class="product-name">双胞胎车</div>
-        </div>
-        <div class="product-item">
-            <div class="product-thumb">
-                <img src="你的图片链接3" alt="四胞胎车">
-            </div>
-            <div class="product-name">四胞胎车</div>
-        </div>
 
-        <!-- 第二行 3个 -->
-        <div class="product-item">
-            <div class="product-thumb">
-                <img src="你的图片链接4" alt="手推车">
+        <!-- 1 婴儿车 → 跳转到 detail1.html -->
+        <a href="detail1.html" style="text-decoration:none;color:inherit;">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <img src="https://raw.githubusercontent.com/kequan404-oss/tupian/refs/heads/main/%E4%B8%BB%E5%9B%BE-04.jpg" alt="婴儿车">
+                </div>
+                <div class="product-name">婴儿车</div>
             </div>
-            <div class="product-name">手推车</div>
-        </div>
-        <div class="product-item">
-            <div class="product-thumb">
-                <img src="你的图片链接5" alt="四合一车">
+        </a>
+
+        <!-- 2 双胞胎车 → detail2.html -->
+        <a href="detail2.html" style="text-decoration:none;color:inherit;">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <img src="https://raw.githubusercontent.com/kequan404-oss/tupian/refs/heads/main/%E8%AF%A6%E6%83%85-06.jpg" alt="双胞胎车">
+                </div>
+                <div class="product-name">双胞胎车</div>
             </div>
-            <div class="product-name">四合一车</div>
-        </div>
-        <div class="product-item">
-            <div class="product-thumb">
-                <img src="你的图片链接6" alt="待添加商品">
+        </a>
+
+        <!-- 3 四胞胎车 → detail3.html -->
+        <a href="detail3.html" style="text-decoration:none;color:inherit;">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <img src="你的图片链接3" alt="四胞胎车">
+                </div>
+                <div class="product-name">四胞胎车</div>
             </div>
-            <div class="product-name">待添加商品</div>
-        </div>
+        </a>
+
+        <!-- 4 手推车 → detail4.html -->
+        <a href="detail4.html" style="text-decoration:none;color:inherit;">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <img src="你的图片链接4" alt="手推车">
+                </div>
+                <div class="product-name">手推车</div>
+            </div>
+        </a>
+
+        <!-- 5 四合一车 → detail5.html -->
+        <a href="detail5.html" style="text-decoration:none;color:inherit;">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <img src="你的图片链接5" alt="四合一车">
+                </div>
+                <div class="product-name">四合一车</div>
+            </div>
+        </a>
+
+        <!-- 6 待添加 → detail6.html -->
+        <a href="detail6.html" style="text-decoration:none;color:inherit;">
+            <div class="product-item">
+                <div class="product-thumb">
+                    <img src="你的图片链接6" alt="待添加商品">
+                </div>
+                <div class="product-name">待添加商品</div>
+            </div>
+        </a>
+
     </div>
 
     <hr>
-
     <h2>工厂信息</h2>
     <p>中国</p>
     <p>广东</p>
     <p>佛山</p>
 
     <hr>
-
     <h2>Contact Us</h2>
     <div class="contact-box">
         <p>Email: sales@yourcompany.com</p>
